@@ -28,3 +28,30 @@ markInput.addEventListener('input', () => {
 });
 
 updateMax();
+
+// Function to calculate percentage
+
+const mark = document.getElementById('mark');
+const maxMark = document.getElementById('maxMark');
+
+
+function calculatePercentage() {
+    const markValue = parseFloat(mark.value);
+    const maxMarkValue = parseFloat(maxMark.value);
+
+    if (!isNaN(markValue) && !isNaN(maxMarkValue) && maxMarkValue !== 0) {
+        const percentage = (markValue / maxMarkValue) * 100;
+        localStorage.setItem('percentage', percentage.toFixed(2));
+        return percentage.toFixed(2);
+    } else {
+        alert("Please enter valid numbers for both marks.");
+        return null;
+    }
+}
+
+function submitInfo() {
+    const percentage = calculatePercentage();
+    window.location.href = `http://localhost:8000/gradeoutput.html?percentage=${percentage}`;
+    
+}
+
