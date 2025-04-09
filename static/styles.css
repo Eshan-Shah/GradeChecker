@@ -7,11 +7,11 @@
     display: inline-block;
     padding: 0.375rem 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.3rem;
     box-shadow: none;
     background-color: #05203c;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 650;
     font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
@@ -57,7 +57,7 @@
 
 
 .primary-slider {
-    -webkit-appearance: none;
+    -webkit-appearance: none; 
     width: 200px;                /* Smaller width for desktop */
     height: 6px;                 /* Thin track */
     background: #05203c;         /* Dark blue track */
@@ -110,18 +110,31 @@
     border-color: #00b3e3;
 }
 
-/* .primary-radio:checked::after {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #05203c;
-    border-radius: 50%;
-    position: relative;
-    top: 4px;
-    left: 4px;
-} */
+
 
 .primary-radio:hover {
     border-color: #00b3e3; /* Light blue hover effect */
 }
+
+.radio-wrapper {
+
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;      /* optional: center vertically too */
+    border-spacing: 5rem;         /* spacing from top if needed */
+}
+
+
+.title-text {
+    font-size: 8rem;
+    font-weight: 550;
+    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.label-text {
+
+    font-size: 3rem;
+    font-weight: 650;
+    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+

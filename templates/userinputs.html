@@ -14,11 +14,16 @@
 </head>
 <body>
     <div id="inputPageTitle" class="center-wrapper">
-    <h1>GradeChecker</h1>
+    <h1 class="title-text">GradeChecker</h1>
     </div>
 
+    <div id="inputPageLevelLabel" class="center-wrapper">
+        <p class="label-text">Level:</p>
+    </div>
+
+
     <div id="inputPageLevel" class="center-wrapper">
-        <p>Level:</p>
+
         <input type="radio" id="GCSE" name="examType", value="GCSE's" class="primary-radio">
         <label for="GCSE">GCSE's</label><br>
 
@@ -26,8 +31,11 @@
         <label for="A-level">A-level's</label>
     </div>
 
-    <div id="inputPageExamBoard" class="center-wrapper">
-        <p>Exam Board:</p>
+    <div id="inputPageExamBoardLabel" class="center-wrapper">
+        <p class="label-text">Exam Board:</p>
+    </div>
+
+    <div id="inputPageExamBoard" class="radio-wrapper">
         <input type="radio" id="Edexcel" name="examBoard" value="Edexcel" class="primary-radio">
         <label for="Edexcel">Edexcel</label><br>
         
@@ -44,8 +52,9 @@
         <label for="CCEA">CCEA</label><br>        
     </div>
 
+
     <div id="inputPageSubject" class="center-wrapper">
-        <p>Subject:</p>
+        <p class="label-text">Subject:</p>
         <input type="text" name="whichSubject" list="possibleSubjects">
         <datalist id="possibleSubjects">
         <option value="Maths">  
