@@ -50,7 +50,11 @@ function calculatePercentage() {
 
 function submitInfo() {
     const percentage = calculatePercentage();
-    window.location.href = `http://127.0.0.1:3000/gradeoutput.html?percentage=${percentage}`;
+    const examLevel = document.querySelector('#examLevel input[name="examLevel"]:checked')
+    const examBoard = document.querySelector('#examBoard input[name="examBoard"]:checked')
+    const subject = document.querySelector('input[name="whichSubject"]')
+    const urlParams = `?percentage=${percentage}&board=${examBoard.value}&level=${examLevel.value}&subject=${subject.value}`
+    window.location.href = `http://127.0.0.1:3000/gradeoutput.html` + urlParams;
     
 }
 
