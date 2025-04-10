@@ -57,7 +57,7 @@
 
 
 .primary-slider {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;  
     width: 200px;                /* Smaller width for desktop */
     height: 6px;                 /* Thin track */
     background: #05203c;         /* Dark blue track */
@@ -157,3 +157,22 @@
     color: white;
   }
   
+
+  .primary-input {
+    padding: 0.5rem 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+    border: 2px solid #05203c;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    color: #05203c;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 1rem;
+}
+
+.primary-input:focus {
+    border-color: #00b3e3;
+    box-shadow: 0 0 0 3px rgba(0, 179, 227, 0.3);
+}
