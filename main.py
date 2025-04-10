@@ -17,7 +17,10 @@ def display():
 @app.route("/gradeoutput.html", methods=["GET"])
 def check():
     percentage = request.args.get("percentage", "")
-    return render_template("gradeoutput.html", percentage=percentage)
+    examboard = request.args.get("board", "")
+    examlevel = request.args.get("level", "")
+    subject = request.args.get("subject", "")
+    return render_template("gradeoutput.html", percentage=percentage, examboard=examboard, examlevel=examlevel, subject=subject)
 
 @app.route("/userinputs.html", methods=["GET"])
 def getInputs():
