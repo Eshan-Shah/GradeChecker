@@ -20,5 +20,5 @@ def extract_text_from_pdfs(folder_path):
     return pd.DataFrame(extracted_data)
 
 # Example usage:
-df = extract_text_from_pdfs("./pdfs/edexcel/")
-df.to_csv("edexcel_raw_extracted.csv", index=False)
+df = extract_text_from_pdfs("/2024 grade boundaries/ALEVEL_EDEXCEL")
+df.to_csv("data.csv", index=False)
