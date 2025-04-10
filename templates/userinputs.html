@@ -22,20 +22,20 @@
     </div>
 
 
-    <div id="inputPageLevel" class="center-wrapper">
-
-        <input type="radio" id="GCSE" name="examType", value="GCSE's" class="primary-radio">
-        <label for="GCSE">GCSE's</label><br>
-
-        <input type="radio" id="A-level" name="examType", value="A-level's" class="primary-radio">
-        <label for="A-level">A-level's</label>
-    </div>
+    <div class="toggle-group center-wrapper">
+        <input type="radio" name="level" id="gcse" value="GCSE">
+        <label for="gcse">GCSE</label>
+      
+        <input type="radio" name="level" id="alevel" value="A-level">
+        <label for="alevel">A-level</label>
+      </div>
+      
 
     <div id="inputPageExamBoardLabel" class="center-wrapper">
         <p class="label-text">Exam Board:</p>
     </div>
 
-    <div id="inputPageExamBoard" class="radio-wrapper">
+    <div class="toggle-group center-wrapper">
         <input type="radio" id="Edexcel" name="examBoard" value="Edexcel" class="primary-radio">
         <label for="Edexcel">Edexcel</label><br>
         
@@ -44,12 +44,6 @@
         
         <input type="radio" id="OCR" name="examBoard" value="OCR" class="primary-radio">
         <label for="OCR">OCR</label><br>
-        
-        <input type="radio" id="WJEC" name="examBoard" value="WJEC" class="primary-radio">
-        <label for="WJEC">WJEC</label><br>
-        
-        <input type="radio" id="CCEA" name="examBoard" value="CCEA" class="primary-radio">
-        <label for="CCEA">CCEA</label><br>        
     </div>
 
 

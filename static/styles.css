@@ -138,3 +138,22 @@
     font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+
+
+.toggle-group input[type="radio"] {
+    display: none;
+  }
+  
+  .toggle-group label {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .toggle-group input[type="radio"]:checked + label {
+    background-color: #333;
+    color: white;
+  }
+  
