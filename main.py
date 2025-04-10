@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from flask_cors import CORS
+from process_data import convert_to_path
 
 app = Flask(__name__)
 
@@ -20,7 +21,10 @@ def check():
     examboard = request.args.get("board", "")
     examlevel = request.args.get("level", "")
     subject = request.args.get("subject", "")
-    return render_template("gradeoutput.html", percentage=percentage, examboard=examboard, examlevel=examlevel, subject=subject)
+    
+    data_path = convert_to_path(examlevel, examboard)
+
+    return render_template("gradeoutput.html", percentage=percentage, data_path=data_path)
 
 @app.route("/userinputs.html", methods=["GET"])
 def getInputs():

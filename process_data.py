@@ -1,24 +1,15 @@
-import fitz  # PyMuPDF
-import os
-import pandas as pd
+import fitz as pdfreader
 
-def extract_text_from_pdfs(folder_path):
-    extracted_data = []
-    
-    for file_name in os.listdir(folder_path):
-        if file_name.endswith(".pdf"):
-            doc_path = os.path.join(folder_path, file_name)
-            with fitz.open(doc_path) as doc:
-                for page in doc:
-                    text = page.get_text()
-                    extracted_data.append({
-                        "file": file_name,
-                        "page": page.number + 1,
-                        "text": text
-                    })
-    
-    return pd.DataFrame(extracted_data)
+data_paths = [
+    "data/ALEVEL_AQA.pdf",
+    "data/ALEVEL_EDEXCEL.pdf",
+    "data/ALEVEL_OCR.pdf",
+    "data/GCSE_AQA.pdf",
+    "data/GCSE_EDEXCEL.pdf",
+    "data/GCSE_OCR.pdf"
+]
 
-# Example usage:
-df = extract_text_from_pdfs("/2024 grade boundaries/ALEVEL_EDEXCEL")
-df.to_csv("data.csv", index=False)
+def convert_to_path(level, board, filetype=".pdf"):
+    path = "data/"
+    path += level.upper() + '_' + board.upper() + filetype
+    return path
