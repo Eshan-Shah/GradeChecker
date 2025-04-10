@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from flask_cors import CORS
-from process_data import convert_to_path, extract_gcse_aqa_data
+from process_data import find_correct_data
 
 app = Flask(__name__)
 
@@ -21,11 +21,11 @@ def check():
     examboard = request.args.get("board", "")
     examlevel = request.args.get("level", "")
     subject = request.args.get("subject", "")
-    
-    data_path = convert_to_path(examlevel, examboard)
-    boundaries = extract_gcse_aqa_data(data_path, subject)
 
-    return render_template("gradeoutput.html", percentage=percentage, data_path=data_path, boundaries=boundaries)
+    data = find_correct_data(examlevel, examboard, subject)
+
+
+    return render_template("gradeoutput.html", percentage=percentage, data=data)
 
 @app.route("/userinputs.html", methods=["GET"])
 def getInputs():
