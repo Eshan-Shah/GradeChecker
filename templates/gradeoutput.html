@@ -15,9 +15,15 @@
 </head>
 <body>
     <div id="outputPagePercentage" class="center-wrapper">
-        <p>You achieved: {{ percentage }}%</p>
-        <p>{{ table | safe }} </p>
+        <h1>You achieved: {{ percentage }}%</h1>
+    </div>
 
+    <div id="outputPagePercentage" class="center-wrapper">
+        <h1>Grade: {{ grade }}</h1>
+    </div>
+
+    <div id="outputPagePercentage" class="center-wrapper">
+        <p>{{ table | safe }} </p>
     </div>
 </body>
 </html>
