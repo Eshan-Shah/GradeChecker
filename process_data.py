@@ -10,7 +10,7 @@ def find_correct_data(level, board, subject):
             if item[0] == 'GCSE':
                 grades = ['Grade 9', 'Grade 8', 'Grade 7', 'Grade 6', 'Grade 5', 'Grade 4,', 'Grade 3', 'Grade 2', 'Grade 1']
             else:
-                grades = ['A*', 'A', 'B', 'C', 'D', 'E,', 'F', '', 'Grade 1']    
+                grades = ['A*', 'A', 'B', 'C', 'D', 'E,', 'U']    
 
             for n in range(4, len(item)):
                 percentage = (item[n] / maxmark) * 100
