@@ -22,10 +22,10 @@ def check():
     examlevel = request.args.get("level", "")
     subject = request.args.get("subject", "")
 
-    data = find_correct_data(examlevel, examboard, subject)
+    data, grade = find_correct_data(examlevel, examboard, subject, float(percentage))
 
 
-    return render_template("gradeoutput.html", percentage=percentage, table=data)
+    return render_template("gradeoutput.html", percentage=percentage, table=data, grade=grade)
 
 @app.route("/userinputs.html", methods=["GET"])
 def getInputs():
