@@ -25,7 +25,7 @@ def check():
     data = find_correct_data(examlevel, examboard, subject)
 
 
-    return render_template("gradeoutput.html", percentage=percentage, data=data)
+    return render_template("gradeoutput.html", percentage=percentage, table=data)
 
 @app.route("/userinputs.html", methods=["GET"])
 def getInputs():
