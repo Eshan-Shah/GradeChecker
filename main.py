@@ -23,10 +23,10 @@ def check():
     subject = request.args.get("subject", "")
 
     data, grade = find_correct_data(examlevel, examboard, subject, float(percentage))
-    if grade.upper() == 'GCSE':
+    if examlevel.upper() == 'GCSE':
         grade = grade.split(" ")[1]
     else:
-        grade
+        grade = grade
 
 
     return render_template("gradeoutput.html", percentage=percentage, table=data, grade=grade)
