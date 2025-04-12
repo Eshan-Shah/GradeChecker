@@ -1,3 +1,14 @@
+/* Background - Dark Purple with Radial Gradient */
+body {
+    background: radial-gradient(circle, rgba(48, 25, 63, 1) 0%, rgba(10, 5, 29, 1) 100%);
+    color: #ffffff; /* Text color */
+    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Primary Button */
 .primary-button {
     all: unset;
     appearance: none;
@@ -8,12 +19,11 @@
     padding: 0.375rem 1rem;
     border: none;
     border-radius: 1.3rem;
-    box-shadow: none;
-    background-color: #05203c;
+    background-color: #6A4C9C; /* Soft purple */
     color: #ffffff;
     font-size: 3rem;
     font-weight: 650;
-    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: inherit;
 
     text-align: center;
     text-decoration: none;
@@ -23,156 +33,191 @@
     transition: background-color 0.2s ease, transform 0.1s ease;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
 }
 
 .primary-button:hover {
-    background-color: #073059;
-    box-shadow: 0 0 0 4px rgba(0, 179, 227, 0.2);
+    background-color: #7A56A3; /* Slightly lighter purple */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
 /* Focus (keyboard accessibility) */
 .primary-button:focus {
-    outline: 3px solid #00b3e3; /* Backpack Sky Blue highlight */
+    outline: 3px solid #6A4C9C; /* Purple outline */
     outline-offset: 2px;
 }
 
 /* Click/Active press */
 .primary-button:active {
-    background-color: #021424;
+    background-color: #5A3C76; /* Darker purple */
     transform: scale(0.98);
 }
 
-
+/* Centering the content */
 .center-wrapper {
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;      /* optional: center vertically too */
-    margin-top: 2rem;         /* spacing from top if needed */
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-/* Optional if you want full-page centering */
 .fullscreen-center {
     height: 100vh;
 }
 
-
+/* Slider */
 .primary-slider {
-    -webkit-appearance: none;  
-    width: 200px;                /* Smaller width for desktop */
-    height: 6px;                 /* Thin track */
-    background: #05203c;         /* Dark blue track */
-    border: 1px solid black;     /* Black outline around slider track */
-    border-radius: 3px;
+    -webkit-appearance: none;
+    width: 250px; /* Wider slider */
+    height: 8px;  /* Thicker track */
+    background: #4E2A84; /* Darker purple track */
+    border-radius: 5px;
     outline: none;
     margin: 1rem 0;
 }
 
-/* Chrome, Safari, Opera, Edge Chromium */
 .primary-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    background: white;
-    border: 2px solid black;     /* Black outline on the thumb */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-/* Firefox */
-.primary-slider::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    background: white;
-    border: 2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-
-.primary-radio {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
+    background: #fff;
+    border: 2px solid #4E2A84; /* Matching border with track */
     border-radius: 50%;
-    border: 3px solid #05203c;
-    background-color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.primary-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #4E2A84;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Radio Buttons (input elements themselves) */
+./* Radio Buttons */
+
+/* Radio Buttons */
+.primary-radio {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #6A4C9C; /* Dark purple border */
+    background-color: #6A4C9C; /* Dark purple when not selected */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     outline: none;
     margin-right: 0.5rem;
 }
 
+/* When the radio button is checked */
 .primary-radio:checked {
-    background-color: #05203c;
-    border-color: #00b3e3;
+    background-color: #00b3e3; /* Bright cyan when selected */
+    border-color: #00b3e3; /* Bright cyan border when checked */
 }
 
-
-
+/* Hover effect for radio button */
 .primary-radio:hover {
-    border-color: #00b3e3; /* Light blue hover effect */
+    background-color: #8A2BE2; /* Purple on hover */
+    border-color: #8A2BE2; /* Purple border on hover */
 }
 
-.radio-wrapper {
-
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;      /* optional: center vertically too */
-    border-spacing: 5rem;         /* spacing from top if needed */
-}
-
-
-.title-text {
-    font-size: 8rem;
-    font-weight: 550;
-    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-.label-text {
-
-    font-size: 3rem;
-    font-weight: 650;
-    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-
-
-.toggle-group input[type="radio"] {
-    display: none;
-  }
-  
-  .toggle-group label {
+/* Label Styling */
+.toggle-group label {
     padding: 10px 20px;
-    border: 2px solid #333;
+    border: 2px solid #6A4C9C;
     border-radius: 6px;
     cursor: pointer;
     margin-right: 10px;
-  }
-  
-  .toggle-group input[type="radio"]:checked + label {
-    background-color: #333;
-    color: white;
-  }
-  
+    background-color: #ffffff; /* Default background color for the label */
+    color: #6A4C9C; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .primary-input {
+/* Label when the radio button is checked */
+input[type="radio"]:checked + label {
+    background-color: #00b3e3; /* Cyan background when checked */
+    color: white; /* White text when checked */
+}
+
+/* Hover effect for label */
+.toggle-group label:hover {
+    background-color: #6A4C9C; /* Lighter purple when hovered */
+    color: white; /* White text on hover */
+}
+
+/* Ensure the radio button and label are aligned visually */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.radio-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-spacing: 5rem;
+}
+
+/* Label & Title Text */
+.title-text {
+    font-size: 8rem;
+    font-weight: 550;
+    font-family: inherit;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4), 0 0 15px #00b3e3; /* Glowing effect */
+    color: #ffffff;
+}
+
+.label-text {
+    font-size: 3rem;
+    font-weight: 650;
+    font-family: inherit;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
+    color: #ffffff;
+}
+
+/* Input Fields */
+.primary-input {
     padding: 0.5rem 1rem;
     font-size: 2.5rem;
     font-weight: 500;
-    font-family: "Skyscanner Relative", -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
-    border: 2px solid #05203c;
+    font-family: inherit;
+    border: 2px solid #6A4C9C;
     border-radius: 1rem;
     background-color: #ffffff;
-    color: #05203c;
+    color: #6A4C9C;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     margin-left: 1rem;
 }
 
 .primary-input:focus {
-    border-color: #00b3e3;
-    box-shadow: 0 0 0 3px rgba(0, 179, 227, 0.3);
+    border-color: #6A4C9C; /* Purple glow when focused */
+    box-shadow: 0 0 0 3px rgba(106, 76, 156, 0.3); /* Soft purple glow */
+}
+
+/* Toggle Group */
+.toggle-group input[type="radio"] {
+    display: none;
+}
+
+.toggle-group label {
+    padding: 10px 20px;
+    border: 2px solid #6A4C9C;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-group input[type="radio"]:checked + label {
+    background-color: #6A4C9C;
+    color: white;
 }

@@ -26,23 +26,33 @@ def find_correct_data(level, board, subject, user_percentage):
 
 def generate_html_table(grade_boundaries, user_grade):
     html = """
-<table border="1" style="border-collapse: collapse; text-align: center; width: 300px;">
+<table border="1" style="border-collapse: collapse; text-align: center; width: 100%; margin: 20px auto; font-family: 'Roboto', sans-serif;">
   <thead>
-    <tr>
-      <th>Grade</th>
-      <th>Boundary (%)</th>
+    <tr style="background-color: #8787B7; color: white; text-transform: uppercase;">
+      <th style="padding: 12px 15px; font-size: 1.5rem; border-radius: 5px;">Grade</th>
+      <th style="padding: 12px 15px; font-size: 1.5rem; border-radius: 5px;">Boundary (%)</th>
     </tr>
   </thead>
   <tbody>
 """
     for grade, boundary in grade_boundaries:
         if grade == user_grade:
-            html += f"    <tr style='background-color: yellow;'><td>{grade.strip()}</td><td>{boundary:.2f}</td></tr>\n"
+            html += f"""
+    <tr style="background-color: rgba(126, 100, 182, 0.8); box-shadow: 0 0 10px rgba(106, 76, 156, 0.7); color: white;">
+      <td style="padding: 12px 15px; font-size: 1.2rem; border-radius: 5px;">{grade.strip()}</td>
+      <td style="padding: 12px 15px; font-size: 1.2rem; border-radius: 5px;">{boundary:.2f}</td>
+    </tr>
+"""
         else:
-            html += f"    <tr><td>{grade.strip()}</td><td>{boundary:.2f}</td></tr>\n"
-
+            html += f"""
+    <tr style="background-color: rgba(48, 25, 63, 0.7); color: white;">
+      <td style="padding: 12px 15px; font-size: 1.2rem; border-radius: 5px;">{grade.strip()}</td>
+      <td style="padding: 12px 15px; font-size: 1.2rem; border-radius: 5px;">{boundary:.2f}</td>
+    </tr>
+"""
     html += "  </tbody>\n</table>"
     return html
+
 
 
 
