@@ -1,5 +1,5 @@
 function toInputsPage() {
-    window.location.href = 'http://127.0.0.1:3000/userinputs.html'
+    window.location.href = '/userinputs.html'
 
 }
 // Functionality for slider max values.
@@ -54,7 +54,7 @@ function submitInfo() {
     const examBoard = document.querySelector('#examBoard input[name="examBoard"]:checked')
     const subject = document.querySelector('input[name="whichSubject"]')
     const urlParams = `?percentage=${percentage}&board=${examBoard.value}&level=${examLevel.value}&subject=${subject.value}`
-    window.location.href = `http://127.0.0.1:3000/gradeoutput.html` + urlParams;
+    window.location.href = `/gradeoutput.html` + urlParams;
     
 }
 
